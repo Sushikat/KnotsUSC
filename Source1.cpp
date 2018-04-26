@@ -33,7 +33,17 @@ const int NCRS; //The length of each run's input list
 
 	Ex. Let NCrs = 3, BigInt = 1284 
 		1284 in base 3NCrs = {1, 6, 7, 6}
-		x = {0, 1, 2, 0, 0, 0, 0, 1, 2, 1284}
+		x = {0, 1, 2, 0, 0, 0, 0, 1, 2, 1284}    -> FromDigits[{0, 0, 1, 6, 7, 6}, 9]
+		y = {3, 1, 0, 0, 0, 1, 1, 1, 0, 1589133} -> FromDigits[{2, 8, 8, 1, 7, 8, 3}, 9]
+		#of  8s 7s 6s 5s 4s 3s 2s 1s 0s
+			
+	xy = {0, 0, 1, 6, 7, 6, 2, 8, 8, 1, 7, 8, 3} base9 -> FromDigits stuff
+	   = {3, 4, 4, 0, 0, 1, 1, 2, 2, 9^7*1284+1589133} -> Encoding Non-commutative Words
+
+	WE NEED TO CHANGE THIS TO MAKE IT MORE EFFICIENT EITHER 
+		WITH LINKED LISTS OR SOMETHING
+
+	CHECK OUT MATHEMATICA/NCAlgebra: FromDigits[], IntegerDigits[]
 */
 
 void swDetq(int q[], int m[], int nCrs) {}
