@@ -1,5 +1,4 @@
 // USC Knots Project but in C this time
-#include "fmpz_poly.h"
 
 const fmpz_poly_t SQRT_Q, INV_SQRT_Q; // Base Ring Z[sqrt(q), sqrt(q)^-1]
 const int NCRS; //The length of each run's input list
@@ -46,7 +45,10 @@ const int NCRS; //The length of each run's input list
 	CHECK OUT MATHEMATICA/NCAlgebra: FromDigits[], IntegerDigits[]
 */
 
-void swDetq(int q[], int m[], int nCrs) {}
+void swDetq(int q[], int m[], int nCrs) {
+	mLen = sizeof(m)/sizeof(m[0]);
+	n = 
+}
 
 void swDetq_k(int s, int mLength) {}
 
