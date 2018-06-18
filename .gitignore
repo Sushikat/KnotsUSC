@@ -286,3 +286,8 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+
+#flint, gmp, mpfr stuff
+flint-2.5.2/*.*
+gmp-6.1.2/*.*
+mpfr-4.0.1/*.*
