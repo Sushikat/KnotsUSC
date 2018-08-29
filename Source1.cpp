@@ -1,4 +1,5 @@
 // USC Knots Project but in C this time
+#include flint-2.5.2 // Need to figure out exactly which files I need or put this into a header file
 
 const fmpz_poly_t SQRT_Q, INV_SQRT_Q; // Base Ring Z[sqrt(q), sqrt(q)^-1]
 const int NCRS; //The length of each run's input list
@@ -45,23 +46,46 @@ const int NCRS; //The length of each run's input list
 	CHECK OUT MATHEMATICA/NCAlgebra: FromDigits[], IntegerDigits[]
 */
 
-void swDetq(int q[], int m[], int nCrs) {
-	mLen = sizeof(m)/sizeof(m[0]);
-	n = 
-}
+// Combinatorica Stuff
+int mInversions();
+int mPermutationQ();
+int mToInversionVector();
 
-void swDetq_k(int s, int mLength) {}
+// Package Variables
+int a,b,c,q;
 
-void rbRep(int q[], int braid[][], int vars[] /*???*/) {}
+void swDetq(int *q, int *m, int *nCrs);
 
-int[] sSubMatrices(int m[]) {}
+void swDetq_k(int s, int mLength);
 
-int[] braidMonomialHelper(int ncPart[], int ncrs[], int signs[]) {}
+void rbRep(int *q, int *braid, int *vars /*???*/);
 
-int[] bmhc(int bmhLocalMonomial[], int nCrs[], int signs[])[]
+int sSubMatrices(int *m);
 
-int duplicateReduction(int nCrs[], numColors) {
-	return 0;
-}
+void simpleWalkCalculator(int *braid, int *NCvars, int q);
+void simpleWalkCalculator(int *knot, int *NCvars, int q);
+void simpleWalkCalculator(int *brd, int *NCvars, int q);
+
+int scriptEPos(int q, int n, int cr, int ad);
+int scriptENeg(int q, int n, int cr, int ad);
+
+int monomialBuilder(int *a, int *b, int *c);
+
+int braidMonomialHelper(int ncPart[], int ncrs[], int signs[]);
+int bmhc(int bmhLocalMonomial[], int nCrs[], int signs[]);
+
+int bmec(int *monomial, int ncrs[], int signs[], int q);
+int braidMonomialExponentCounter(int *monomialRule, int ncrs[], int signs[], int q);
+
+int duplicateReduction(int ncrs[], int numColors);
+int duplicateReduction(int *walklist_NCPoly, int ncrs[], int numColors);
+
+// DRC?
+
+int cj(int q, int nc, int *braidKnot);
+int cj(int q, int nc, int *braidBR);
+int cj(int q, int nc, int *braidList);
+
+int cjScriptE(int cr, int ad, int position);
 
 
